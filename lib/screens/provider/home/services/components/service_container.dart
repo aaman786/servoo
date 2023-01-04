@@ -5,52 +5,14 @@ import 'package:servoo/screens/provider/services/provider_services.dart';
 
 import '../../../../../global/constants.dart';
 
-class ProviderApprovedService extends StatefulWidget {
-  const ProviderApprovedService({super.key});
-
-  @override
-  State<ProviderApprovedService> createState() =>
-      _ProviderApprovedServiceState();
-}
-
-class _ProviderApprovedServiceState extends State<ProviderApprovedService> {
-  final ScrollController _controller = ScrollController();
-  // final List<String> _listImages = [];
-
-  // late List data;
-
-  var isLoading = true;
-  bool isAdmin = true;
-
-  @override
-  void initState() {
-    super.initState();
-    // getAllData();
-  }
-
-  // Future getAllData() async {
-  //   var response = await http.post(Uri.parse(url), headers: {
-  //     "Accept": "application/json"
-  //   }, body: {
-  //     "service_status": 'approve',
-  //     "service_provider_id": box!.get('id'),
-  //   });
-  //   //print(response.body);
-  //   setState(() {
-  //     List convertDataToJson = json.decode(response.body)['result'];
-  //     data = convertDataToJson;
-
-  //     isLoading = true;
-  //     print(data);
-  //   });
-
-  //   // throw Exception('Failed to load data');
-  // }
-
-  ProviderService providerService = ProviderService();
+class ServiceContainer extends StatelessWidget {
+  const ServiceContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
+    ProviderService providerService = ProviderService();
+    final ScrollController _controller = ScrollController();
+
     return FutureBuilder(
       future: providerService.getService(context: context),
       builder: (context, snapshot) {

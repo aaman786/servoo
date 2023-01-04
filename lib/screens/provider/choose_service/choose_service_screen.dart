@@ -24,20 +24,6 @@ class ChooseServiceScreen extends StatelessWidget {
   }
 }
 
-List<Map<String, String>> iconData = [
-  {"name": "Appliance", "icon": "assets/icons/appliances.png"},
-  {"name": "Car Wash", "icon": "assets/icons/car_wash.png"},
-  {"name": "Carpenter", "icon": "assets/icons/carpenter.png"},
-  {"name": "Cleaning", "icon": "assets/icons/cleaning.png"},
-  {"name": "Electrician", "icon": "assets/icons/electrician.png"},
-  {"name": "Laundry", "icon": "assets/icons/laundry.png"},
-  {"name": "Painting", "icon": "assets/icons/painting.png"},
-  {"name": "Plumbing", "icon": "assets/icons/plumbing.png"},
-  {"name": "Repairing", "icon": "assets/icons/repairing.png"},
-  {"name": "Salon", "icon": "assets/icons/salon.png"},
-  {"name": "Shifting", "icon": "assets/icons/shifting.png"},
-];
-
 class SelectCard extends StatelessWidget {
   const SelectCard({super.key, required this.choice});
   final Map<String, String> choice;

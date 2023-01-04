@@ -5,6 +5,7 @@ import 'package:servoo/routes.dart';
 import 'package:servoo/screens/authentication/authentication_services.dart';
 import 'package:servoo/screens/authentication/sign_in/sign_in_screen.dart';
 import 'package:servoo/screens/authentication/sign_up/sign_up.dart';
+import 'package:servoo/screens/user/customer_home/customer_home_screen.dart';
 import 'package:servoo/screens/provider/home/home_screen.dart';
 import 'package:servoo/screens/splash/splash.dart';
 import 'package:servoo/state_management/general_provider.dart';
@@ -60,7 +61,7 @@ class _MyAppState extends State<MyApp> {
       home: Provider.of<UserProvider>(context).user.token.isNotEmpty
           ? Provider.of<UserProvider>(context).user.identity == "provider"
               ? const ProviderHomeScreen()
-              : const SplashScreen()
+              : const CustomerHomeScreen()
           : const SignInScreen(),
     );
   }

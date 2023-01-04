@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:servoo/screens/provider/home/services/components/approved.dart';
+import 'package:servoo/screens/provider/home/services/components/service_container.dart';
 
 class ProviderServiceBody extends StatefulWidget {
   const ProviderServiceBody({super.key});
@@ -11,9 +11,9 @@ class ProviderServiceBody extends StatefulWidget {
 class _ProviderServiceBodyState extends State<ProviderServiceBody> {
   @override
   Widget build(BuildContext context) {
-    return TabBarView(
+    return const TabBarView(
       children: <Widget>[
-        ProviderApprovedService(),
+        ServiceContainer(),
         // PendingServices(),
       ],
     );

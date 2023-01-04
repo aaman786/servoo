@@ -8,6 +8,7 @@ import 'package:servoo/screens/provider/home/home_screen.dart';
 import 'package:servoo/screens/provider/home/services/services_screen.dart';
 import 'package:servoo/screens/provider/serive_details/service_detail_screen.dart';
 import 'package:servoo/screens/splash/splash.dart';
+import 'package:servoo/screens/user/customer_home/search_service/search_service_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
@@ -37,6 +38,13 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
     case ProviderHomeScreen.routeName:
       return MaterialPageRoute(
           settings: routeSettings, builder: (_) => const ProviderHomeScreen());
+
+    case SearchServiceScreen.routeName:
+      final List<ServiceModel> services =
+          routeSettings.arguments as List<ServiceModel>;
+      return MaterialPageRoute(
+          settings: routeSettings,
+          builder: (_) => SearchServiceScreen(services: services));
 
     default:
       return MaterialPageRoute(

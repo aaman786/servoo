@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 // other files import
 const authRouter = require("./server_routes/auth");
 const providerRouter = require("./server_routes/provider");
+const userRouter = require("./server_routes/user");
 
 // General Initializaion
 const PORT = 3000;
@@ -18,6 +19,7 @@ mongoose.set("strictQuery", false);
 app.use(express.json()); //mediatory
 app.use(providerRouter);
 app.use(authRouter);
+app.use(userRouter);
 
 // connections To Mongo DB
 mongoose

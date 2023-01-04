@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:servoo/screens/provider/home/services/components/approved.dart';
+import 'package:servoo/screens/provider/home/services/components/service_container.dart';
 
 import '../../../../global/constants.dart';
 import 'home_menu.dart';
@@ -92,7 +92,7 @@ class ProviderHomeBody extends StatelessWidget {
                     fontSize: 18),
               )),
             ),
-            const ProviderApprovedService(),
+            const ServiceContainer(),
           ],
         ),
       ),
